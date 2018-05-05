@@ -14,6 +14,9 @@
 		94A39D5C209E1F48003E58F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A39D5B209E1F48003E58F4 /* Assets.xcassets */; };
 		94A39D5F209E1F48003E58F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A39D5D209E1F48003E58F4 /* LaunchScreen.storyboard */; };
 		94A39D62209E1F48003E58F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A39D61209E1F48003E58F4 /* main.m */; };
+		94AA3B47209E2A0D002D91DA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AA3B46209E2A0D002D91DA /* WebKit.framework */; };
+		94AA3B4A209E3811002D91DA /* StravaConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AA3B49209E3811002D91DA /* StravaConstants.m */; };
+		94AA3B4D209E38BC002D91DA /* StravaAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AA3B4C209E38BC002D91DA /* StravaAPIClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,11 @@
 		94A39D5E209E1F48003E58F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94A39D60209E1F48003E58F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94A39D61209E1F48003E58F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		94AA3B46209E2A0D002D91DA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		94AA3B48209E3811002D91DA /* StravaConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StravaConstants.h; sourceTree = "<group>"; };
+		94AA3B49209E3811002D91DA /* StravaConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StravaConstants.m; sourceTree = "<group>"; };
+		94AA3B4B209E38BC002D91DA /* StravaAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StravaAPIClient.h; sourceTree = "<group>"; };
+		94AA3B4C209E38BC002D91DA /* StravaAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StravaAPIClient.m; sourceTree = "<group>"; };
 		D3ABD8E4F5681B0968129798 /* Pods-StravaAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StravaAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StravaAPI/Pods-StravaAPI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94AA3B47209E2A0D002D91DA /* WebKit.framework in Frameworks */,
 				1709A87F2CE68C85514C8F45 /* libPods-StravaAPI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +56,7 @@
 		7043079F463783FF11B30C09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94AA3B46209E2A0D002D91DA /* WebKit.framework */,
 				802AC9CB8FF183C1B9AADB18 /* libPods-StravaAPI.a */,
 			);
 			name = Frameworks;
@@ -75,13 +85,17 @@
 			children = (
 				94A39D52209E1F46003E58F4 /* AppDelegate.h */,
 				94A39D53209E1F46003E58F4 /* AppDelegate.m */,
+				94A39D5B209E1F48003E58F4 /* Assets.xcassets */,
+				94A39D60209E1F48003E58F4 /* Info.plist */,
+				94A39D5D209E1F48003E58F4 /* LaunchScreen.storyboard */,
+				94A39D61209E1F48003E58F4 /* main.m */,
+				94A39D58209E1F46003E58F4 /* Main.storyboard */,
+				94AA3B4B209E38BC002D91DA /* StravaAPIClient.h */,
+				94AA3B4C209E38BC002D91DA /* StravaAPIClient.m */,
+				94AA3B48209E3811002D91DA /* StravaConstants.h */,
+				94AA3B49209E3811002D91DA /* StravaConstants.m */,
 				94A39D55209E1F46003E58F4 /* ViewController.h */,
 				94A39D56209E1F46003E58F4 /* ViewController.m */,
-				94A39D58209E1F46003E58F4 /* Main.storyboard */,
-				94A39D5B209E1F48003E58F4 /* Assets.xcassets */,
-				94A39D5D209E1F48003E58F4 /* LaunchScreen.storyboard */,
-				94A39D60209E1F48003E58F4 /* Info.plist */,
-				94A39D61209E1F48003E58F4 /* main.m */,
 			);
 			path = StravaAPI;
 			sourceTree = "<group>";
@@ -188,7 +202,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				94A39D57209E1F46003E58F4 /* ViewController.m in Sources */,
+				94AA3B4D209E38BC002D91DA /* StravaAPIClient.m in Sources */,
 				94A39D62209E1F48003E58F4 /* main.m in Sources */,
+				94AA3B4A209E3811002D91DA /* StravaConstants.m in Sources */,
 				94A39D54209E1F46003E58F4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,7 +349,10 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = StravaAPI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = rkb.StravaAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -349,7 +368,10 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = StravaAPI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = rkb.StravaAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
