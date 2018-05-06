@@ -16,8 +16,8 @@
     self.client = [[StravaAPIClient alloc] init];
     
     [self.client getAthelete:@"26492009"
-                     success:^(id response) {
-                         NSLog(@"%@", response);
+                     success:^(Athlete *athlete) {
+                         NSLog(@"%@", athlete);
                      } failure:^(NSError *error) {
                          NSLog(@"%@", error);
                      }];

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1709A87F2CE68C85514C8F45 /* libPods-StravaAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802AC9CB8FF183C1B9AADB18 /* libPods-StravaAPI.a */; };
+		94901A4B209E65AB00D6CCCC /* Athlete.m in Sources */ = {isa = PBXBuildFile; fileRef = 94901A4A209E65AB00D6CCCC /* Athlete.m */; };
+		94901A4E209E672000D6CCCC /* AthleteDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 94901A4D209E672000D6CCCC /* AthleteDeserializer.m */; };
 		94A39D54209E1F46003E58F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A39D53209E1F46003E58F4 /* AppDelegate.m */; };
 		94A39D57209E1F46003E58F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A39D56209E1F46003E58F4 /* ViewController.m */; };
 		94A39D5A209E1F46003E58F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A39D58209E1F46003E58F4 /* Main.storyboard */; };
@@ -22,6 +24,10 @@
 /* Begin PBXFileReference section */
 		6DBDF23F8B63A7F70C310993 /* Pods-StravaAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StravaAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-StravaAPI/Pods-StravaAPI.release.xcconfig"; sourceTree = "<group>"; };
 		802AC9CB8FF183C1B9AADB18 /* libPods-StravaAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StravaAPI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94901A49209E65AB00D6CCCC /* Athlete.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Athlete.h; sourceTree = "<group>"; };
+		94901A4A209E65AB00D6CCCC /* Athlete.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Athlete.m; sourceTree = "<group>"; };
+		94901A4C209E672000D6CCCC /* AthleteDeserializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AthleteDeserializer.h; sourceTree = "<group>"; };
+		94901A4D209E672000D6CCCC /* AthleteDeserializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AthleteDeserializer.m; sourceTree = "<group>"; };
 		94A39D4F209E1F46003E58F4 /* StravaAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StravaAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A39D52209E1F46003E58F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94A39D53209E1F46003E58F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +68,82 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		94901A41209E641400D6CCCC /* AppCode */ = {
+			isa = PBXGroup;
+			children = (
+				94901A47209E64A100D6CCCC /* AppDelegate */,
+				94901A48209E64AA00D6CCCC /* Models */,
+				94901A46209E649A00D6CCCC /* ViewControllers */,
+			);
+			path = AppCode;
+			sourceTree = "<group>";
+		};
+		94901A42209E642F00D6CCCC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				94A39D58209E1F46003E58F4 /* Main.storyboard */,
+				94A39D5B209E1F48003E58F4 /* Assets.xcassets */,
+				94A39D5D209E1F48003E58F4 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		94901A43209E644100D6CCCC /* Supporting FIles */ = {
+			isa = PBXGroup;
+			children = (
+				94A39D60209E1F48003E58F4 /* Info.plist */,
+				94A39D61209E1F48003E58F4 /* main.m */,
+			);
+			path = "Supporting FIles";
+			sourceTree = "<group>";
+		};
+		94901A44209E647600D6CCCC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				94AA3B48209E3811002D91DA /* StravaConstants.h */,
+				94AA3B49209E3811002D91DA /* StravaConstants.m */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		94901A45209E648600D6CCCC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				94901A4C209E672000D6CCCC /* AthleteDeserializer.h */,
+				94901A4D209E672000D6CCCC /* AthleteDeserializer.m */,
+				94AA3B4B209E38BC002D91DA /* StravaAPIClient.h */,
+				94AA3B4C209E38BC002D91DA /* StravaAPIClient.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		94901A46209E649A00D6CCCC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				94A39D55209E1F46003E58F4 /* ViewController.h */,
+				94A39D56209E1F46003E58F4 /* ViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		94901A47209E64A100D6CCCC /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				94A39D52209E1F46003E58F4 /* AppDelegate.h */,
+				94A39D53209E1F46003E58F4 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		94901A48209E64AA00D6CCCC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94901A49209E65AB00D6CCCC /* Athlete.h */,
+				94901A4A209E65AB00D6CCCC /* Athlete.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		94A39D46209E1F45003E58F4 = {
 			isa = PBXGroup;
 			children = (
@@ -83,19 +165,11 @@
 		94A39D51209E1F46003E58F4 /* StravaAPI */ = {
 			isa = PBXGroup;
 			children = (
-				94A39D52209E1F46003E58F4 /* AppDelegate.h */,
-				94A39D53209E1F46003E58F4 /* AppDelegate.m */,
-				94A39D5B209E1F48003E58F4 /* Assets.xcassets */,
-				94A39D60209E1F48003E58F4 /* Info.plist */,
-				94A39D5D209E1F48003E58F4 /* LaunchScreen.storyboard */,
-				94A39D61209E1F48003E58F4 /* main.m */,
-				94A39D58209E1F46003E58F4 /* Main.storyboard */,
-				94AA3B4B209E38BC002D91DA /* StravaAPIClient.h */,
-				94AA3B4C209E38BC002D91DA /* StravaAPIClient.m */,
-				94AA3B48209E3811002D91DA /* StravaConstants.h */,
-				94AA3B49209E3811002D91DA /* StravaConstants.m */,
-				94A39D55209E1F46003E58F4 /* ViewController.h */,
-				94A39D56209E1F46003E58F4 /* ViewController.m */,
+				94901A41209E641400D6CCCC /* AppCode */,
+				94901A44209E647600D6CCCC /* Constants */,
+				94901A45209E648600D6CCCC /* Networking */,
+				94901A42209E642F00D6CCCC /* Resources */,
+				94901A43209E644100D6CCCC /* Supporting FIles */,
 			);
 			path = StravaAPI;
 			sourceTree = "<group>";
@@ -206,6 +280,8 @@
 				94A39D62209E1F48003E58F4 /* main.m in Sources */,
 				94AA3B4A209E3811002D91DA /* StravaConstants.m in Sources */,
 				94A39D54209E1F46003E58F4 /* AppDelegate.m in Sources */,
+				94901A4B209E65AB00D6CCCC /* Athlete.m in Sources */,
+				94901A4E209E672000D6CCCC /* AthleteDeserializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = StravaAPI/Info.plist;
+				INFOPLIST_FILE = "StravaAPI/Supporting FIles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -367,7 +443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = StravaAPI/Info.plist;
+				INFOPLIST_FILE = "StravaAPI/Supporting FIles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
