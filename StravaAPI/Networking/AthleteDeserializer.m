@@ -6,8 +6,8 @@
 - (Athlete *)deserialize:(NSDictionary *)response {
     Athlete *athlete = [[Athlete alloc] init];
     
-    athlete.firstName = response[@"firstName"];
-    athlete.lastName = response[@"lastName"];
+    athlete.firstName = response[@"firstname"];
+    athlete.lastName = response[@"lastname"];
     athlete.email = response[@"email"];
     
     return athlete;
