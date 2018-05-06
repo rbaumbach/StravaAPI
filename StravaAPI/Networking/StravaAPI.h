@@ -2,7 +2,7 @@
 
 @class Athlete;
 
-@interface StravaAPIClient : NSObject
+@protocol StravaAPI
 
 - (void)getAthelete:(NSString *)atheleteID
             success:(void (^)(Athlete *athlete))success

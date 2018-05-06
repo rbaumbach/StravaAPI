@@ -18,7 +18,7 @@
 		94A39D62209E1F48003E58F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A39D61209E1F48003E58F4 /* main.m */; };
 		94AA3B47209E2A0D002D91DA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AA3B46209E2A0D002D91DA /* WebKit.framework */; };
 		94AA3B4A209E3811002D91DA /* StravaConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AA3B49209E3811002D91DA /* StravaConstants.m */; };
-		94AA3B4D209E38BC002D91DA /* StravaAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AA3B4C209E38BC002D91DA /* StravaAPIClient.m */; };
+		94AA3B4D209E38BC002D91DA /* StravaAPIAFClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AA3B4C209E38BC002D91DA /* StravaAPIAFClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +28,7 @@
 		94901A4A209E65AB00D6CCCC /* Athlete.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Athlete.m; sourceTree = "<group>"; };
 		94901A4C209E672000D6CCCC /* AthleteDeserializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AthleteDeserializer.h; sourceTree = "<group>"; };
 		94901A4D209E672000D6CCCC /* AthleteDeserializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AthleteDeserializer.m; sourceTree = "<group>"; };
+		94901A4F209EAED800D6CCCC /* StravaAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StravaAPI.h; sourceTree = "<group>"; };
 		94A39D4F209E1F46003E58F4 /* StravaAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StravaAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A39D52209E1F46003E58F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94A39D53209E1F46003E58F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -41,8 +42,8 @@
 		94AA3B46209E2A0D002D91DA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		94AA3B48209E3811002D91DA /* StravaConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StravaConstants.h; sourceTree = "<group>"; };
 		94AA3B49209E3811002D91DA /* StravaConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StravaConstants.m; sourceTree = "<group>"; };
-		94AA3B4B209E38BC002D91DA /* StravaAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StravaAPIClient.h; sourceTree = "<group>"; };
-		94AA3B4C209E38BC002D91DA /* StravaAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StravaAPIClient.m; sourceTree = "<group>"; };
+		94AA3B4B209E38BC002D91DA /* StravaAPIAFClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StravaAPIAFClient.h; sourceTree = "<group>"; };
+		94AA3B4C209E38BC002D91DA /* StravaAPIAFClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StravaAPIAFClient.m; sourceTree = "<group>"; };
 		D3ABD8E4F5681B0968129798 /* Pods-StravaAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StravaAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StravaAPI/Pods-StravaAPI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,8 +112,9 @@
 			children = (
 				94901A4C209E672000D6CCCC /* AthleteDeserializer.h */,
 				94901A4D209E672000D6CCCC /* AthleteDeserializer.m */,
-				94AA3B4B209E38BC002D91DA /* StravaAPIClient.h */,
-				94AA3B4C209E38BC002D91DA /* StravaAPIClient.m */,
+				94901A4F209EAED800D6CCCC /* StravaAPI.h */,
+				94AA3B4B209E38BC002D91DA /* StravaAPIAFClient.h */,
+				94AA3B4C209E38BC002D91DA /* StravaAPIAFClient.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -276,7 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94A39D57209E1F46003E58F4 /* ViewController.m in Sources */,
-				94AA3B4D209E38BC002D91DA /* StravaAPIClient.m in Sources */,
+				94AA3B4D209E38BC002D91DA /* StravaAPIAFClient.m in Sources */,
 				94A39D62209E1F48003E58F4 /* main.m in Sources */,
 				94AA3B4A209E3811002D91DA /* StravaConstants.m in Sources */,
 				94A39D54209E1F46003E58F4 /* AppDelegate.m in Sources */,

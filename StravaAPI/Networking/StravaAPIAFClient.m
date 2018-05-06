@@ -1,13 +1,13 @@
 #import <AFNetworking/AFNetworking.h>
-#import "StravaAPIClient.h"
+#import "StravaAPIAFClient.h"
 #import "StravaConstants.h"
 #import "AthleteDeserializer.h"
 
-@interface StravaAPIClient()
+@interface StravaAPIAFClient()
 @property (strong, nonatomic) AFHTTPSessionManager *sessionManager;
 @end
 
-@implementation StravaAPIClient
+@implementation StravaAPIAFClient
 
 - (instancetype)init
 {
