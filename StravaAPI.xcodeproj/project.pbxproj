@@ -10,6 +10,7 @@
 		1709A87F2CE68C85514C8F45 /* libPods-StravaAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802AC9CB8FF183C1B9AADB18 /* libPods-StravaAPI.a */; };
 		94901A4B209E65AB00D6CCCC /* Athlete.m in Sources */ = {isa = PBXBuildFile; fileRef = 94901A4A209E65AB00D6CCCC /* Athlete.m */; };
 		94901A4E209E672000D6CCCC /* AthleteDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 94901A4D209E672000D6CCCC /* AthleteDeserializer.m */; };
+		94901A54209F5E2B00D6CCCC /* StravaAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 94901A53209F5E2B00D6CCCC /* StravaAPIClient.m */; };
 		94A39D54209E1F46003E58F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A39D53209E1F46003E58F4 /* AppDelegate.m */; };
 		94A39D57209E1F46003E58F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A39D56209E1F46003E58F4 /* ViewController.m */; };
 		94A39D5A209E1F46003E58F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A39D58209E1F46003E58F4 /* Main.storyboard */; };
@@ -29,6 +30,8 @@
 		94901A4C209E672000D6CCCC /* AthleteDeserializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AthleteDeserializer.h; sourceTree = "<group>"; };
 		94901A4D209E672000D6CCCC /* AthleteDeserializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AthleteDeserializer.m; sourceTree = "<group>"; };
 		94901A4F209EAED800D6CCCC /* StravaAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StravaAPI.h; sourceTree = "<group>"; };
+		94901A52209F5E2B00D6CCCC /* StravaAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StravaAPIClient.h; sourceTree = "<group>"; };
+		94901A53209F5E2B00D6CCCC /* StravaAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StravaAPIClient.m; sourceTree = "<group>"; };
 		94A39D4F209E1F46003E58F4 /* StravaAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StravaAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A39D52209E1F46003E58F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94A39D53209E1F46003E58F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -110,11 +113,9 @@
 		94901A45209E648600D6CCCC /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				94901A4C209E672000D6CCCC /* AthleteDeserializer.h */,
-				94901A4D209E672000D6CCCC /* AthleteDeserializer.m */,
 				94901A4F209EAED800D6CCCC /* StravaAPI.h */,
-				94AA3B4B209E38BC002D91DA /* StravaAPIAFClient.h */,
-				94AA3B4C209E38BC002D91DA /* StravaAPIAFClient.m */,
+				94901A56209F5E3E00D6CCCC /* Deserializers */,
+				94901A55209F5E3000D6CCCC /* Clients */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -144,6 +145,26 @@
 				94901A4A209E65AB00D6CCCC /* Athlete.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		94901A55209F5E3000D6CCCC /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				94AA3B4B209E38BC002D91DA /* StravaAPIAFClient.h */,
+				94AA3B4C209E38BC002D91DA /* StravaAPIAFClient.m */,
+				94901A52209F5E2B00D6CCCC /* StravaAPIClient.h */,
+				94901A53209F5E2B00D6CCCC /* StravaAPIClient.m */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		94901A56209F5E3E00D6CCCC /* Deserializers */ = {
+			isa = PBXGroup;
+			children = (
+				94901A4C209E672000D6CCCC /* AthleteDeserializer.h */,
+				94901A4D209E672000D6CCCC /* AthleteDeserializer.m */,
+			);
+			path = Deserializers;
 			sourceTree = "<group>";
 		};
 		94A39D46209E1F45003E58F4 = {
@@ -283,6 +304,7 @@
 				94AA3B4A209E3811002D91DA /* StravaConstants.m in Sources */,
 				94A39D54209E1F46003E58F4 /* AppDelegate.m in Sources */,
 				94901A4B209E65AB00D6CCCC /* Athlete.m in Sources */,
+				94901A54209F5E2B00D6CCCC /* StravaAPIClient.m in Sources */,
 				94901A4E209E672000D6CCCC /* AthleteDeserializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

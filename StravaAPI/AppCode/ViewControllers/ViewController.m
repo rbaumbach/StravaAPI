@@ -2,6 +2,7 @@
 #import "ViewController.h"
 #import "StravaAPI.h"
 #import "StravaAPIAFClient.h"
+#import "StravaAPIClient.h"
 #import "Athlete.h"
 
 @interface ViewController()
@@ -20,7 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.client = [[StravaAPIAFClient alloc] init];
+//    self.client = [[StravaAPIAFClient alloc] init];
+    self.client = [[StravaAPIClient alloc] init];
     
     [self.client getAthelete:@"26492009"
                      success:^(Athlete *athlete) {
