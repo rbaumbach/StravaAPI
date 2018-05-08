@@ -1,11 +1,3 @@
-//
-//  main.m
-//  StravaAPI
-//
-//  Created by ryan on 5/5/18.
-//  Copyright © 2018 ryan. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
