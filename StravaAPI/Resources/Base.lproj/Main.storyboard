@@ -27,6 +27,7 @@
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1Oq-Ix-usb" userLabel="activityIndicatorView">
                                 <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
                             </activityIndicatorView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x name x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO7-6h-9f1" userLabel="nameLabel">
                                 <rect key="frame" x="152.5" y="164" width="69" height="21"/>
@@ -46,16 +47,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x Bike x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6XP-fo-96U" userLabel="bikeLabel">
+                                <rect key="frame" x="157.5" y="226" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x Running Shoes x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyW-ca-G0a" userLabel="runningShoesLabel">
+                                <rect key="frame" x="116.5" y="255" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="PO7-6h-9f1" firstAttribute="centerX" secondItem="6JA-h8-SWN" secondAttribute="centerX" id="1Xp-74-0Kf"/>
                             <constraint firstItem="jUp-gr-9mM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3g6-MQ-QDP"/>
                             <constraint firstItem="1Oq-Ix-usb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9WC-ej-bKQ"/>
+                            <constraint firstItem="6XP-fo-96U" firstAttribute="centerX" secondItem="KXm-oA-zk5" secondAttribute="centerX" id="DoG-Wj-3YS"/>
                             <constraint firstItem="KXm-oA-zk5" firstAttribute="top" secondItem="PO7-6h-9f1" secondAttribute="bottom" constant="10" id="Fe3-FQ-yAm"/>
+                            <constraint firstItem="dyW-ca-G0a" firstAttribute="centerX" secondItem="6XP-fo-96U" secondAttribute="centerX" id="JX0-LE-5r5"/>
                             <constraint firstItem="1Oq-Ix-usb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SRz-xH-8jG"/>
+                            <constraint firstItem="dyW-ca-G0a" firstAttribute="top" secondItem="6XP-fo-96U" secondAttribute="bottom" constant="8" id="W5G-Sx-Psv"/>
                             <constraint firstItem="PO7-6h-9f1" firstAttribute="top" secondItem="6JA-h8-SWN" secondAttribute="bottom" constant="10" id="bzx-fP-dZe"/>
                             <constraint firstItem="jUp-gr-9mM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i3F-jQ-wzE"/>
+                            <constraint firstItem="6XP-fo-96U" firstAttribute="top" secondItem="KXm-oA-zk5" secondAttribute="bottom" constant="10" id="ktr-Sv-5At"/>
                             <constraint firstItem="6JA-h8-SWN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="seC-Pj-O25"/>
                             <constraint firstItem="6JA-h8-SWN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="v3N-iX-pzb"/>
                             <constraint firstItem="KXm-oA-zk5" firstAttribute="centerX" secondItem="PO7-6h-9f1" secondAttribute="centerX" id="vbU-10-wfY"/>
@@ -65,9 +82,11 @@
                     <connections>
                         <outlet property="activityIndicatorView" destination="1Oq-Ix-usb" id="AJP-Jm-sup"/>
                         <outlet property="avatarImageView" destination="6JA-h8-SWN" id="kLK-9E-2tl"/>
+                        <outlet property="bikeLabel" destination="6XP-fo-96U" id="Kjo-z3-QYY"/>
                         <outlet property="emailLabel" destination="KXm-oA-zk5" id="clU-7f-2FV"/>
                         <outlet property="errorLabel" destination="jUp-gr-9mM" id="rll-WF-aUB"/>
                         <outlet property="nameLabel" destination="PO7-6h-9f1" id="hxg-mo-kQX"/>
+                        <outlet property="runningShoesLabel" destination="dyW-ca-G0a" id="fSH-oQ-TRQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
