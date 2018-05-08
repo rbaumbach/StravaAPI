@@ -26,4 +26,4 @@ To make things easy, the code I have is using the Strava access token.  This wil
 
 This project uses both AFNetworking and NSURLSession to make networking calls.  The dual api clients that I have created both conform to the StravaAPI protocol which makes swapping them out very simple.  This can be observed in `ViewController`.
 
-The weak/strong self dance is not required for the networking calls as they are being made.  To prove that there are not any block retain cycles, I have added logs in dealloc methods in `ViewController`, `StravaAPIAFClient` and `StravaAFIClient`.  I also placed the `View Controller` in a navigation stack to show that everything is being deallocated when the `View Controller` is being dismissed.
+The weak/strong self dance is not required for the networking calls as they are being made.  To prove that there are not any block retain cycles, I have added logs in dealloc methods in `ViewController`, `StravaAPIAFClient` and `StravaAFIClient`.  I also placed the `View Controller` in a navigation stack to show that everything is being deallocated when the `ViewController` is being dismissed.
