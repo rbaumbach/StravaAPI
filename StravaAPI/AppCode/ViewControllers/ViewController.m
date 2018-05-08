@@ -26,7 +26,7 @@
     [super viewDidLoad];
     
     self.client = [[StravaAPIAFClient alloc] init];
-    //    self.client = [[StravaAPIClient alloc] init];
+//    self.client = [[StravaAPIClient alloc] init];
     
     // My athleteID: @"26492009"
     // Bike: @"b4784851"

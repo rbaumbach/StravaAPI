@@ -26,7 +26,7 @@
             success:(void (^)(Athlete *athlete))success
             failure:(void (^)(NSError *error))failure {
     NSString *endpointString = [NSString stringWithFormat:@"athletes/%@", atheleteID];
-    
+        
     [self get:endpointString success:^(id response) {
         AthleteDeserializer *deserializer = [[AthleteDeserializer alloc] init];
         Athlete *athlete = [deserializer deserialize:response];
