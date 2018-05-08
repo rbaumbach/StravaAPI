@@ -110,7 +110,7 @@
               }];
     }
     
-    dispatch_group_notify(serviceGroup,dispatch_get_main_queue(),^{
+    dispatch_group_notify(serviceGroup, dispatch_get_main_queue(),^{
         if (potentialError) {
             failure(potentialError);
         } else {

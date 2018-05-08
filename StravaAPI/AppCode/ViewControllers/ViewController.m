@@ -63,16 +63,21 @@
     self.emailLabel.text = athlete.email;
     self.emailLabel.hidden = NO;
     
-    self.bikeLabel.text = [NSString stringWithFormat:@"Bike brand: %@", ((Gear *)athlete.bikes[0]).brandName];
-    self.bikeLabel.hidden = NO;
+    // For now the view only shows the first bike/running shoes that is given by the api
     
-    self.runningShoesLabel.text = [NSString stringWithFormat:@"Running shoes brand: %@", ((Gear *)athlete.runningShoes[0]).brandName];
-    self.runningShoesLabel.hidden = NO;
+    if (athlete.bikes.count != 0) {
+        self.bikeLabel.text = [NSString stringWithFormat:@"Bike brand: %@", ((Gear *)athlete.bikes[0]).brandName];
+        self.bikeLabel.hidden = NO;
+    }
     
+    if (athlete.runningShoes.count != 0) {
+        self.runningShoesLabel.text = [NSString stringWithFormat:@"Running shoes brand: %@", ((Gear *)athlete.runningShoes[0]).brandName];
+        self.runningShoesLabel.hidden = NO;
+    }
 }
 
 - (void)loadError {
-    self.errorLabel.hidden = YES;
+    self.errorLabel.hidden = NO;
 }
 
 @end
