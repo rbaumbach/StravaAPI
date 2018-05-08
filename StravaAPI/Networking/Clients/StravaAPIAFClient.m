@@ -82,8 +82,10 @@
                          failure:(void (^)(NSError *error))failure {
     NSArray<Gear *> *allGear = [athlete.bikes arrayByAddingObjectsFromArray:athlete.runningShoes];
     
-    // Since we want to call success once we have all the gear, we will need to use dispatch_groups.  We will want
-    // to wait till all the gear calls have been successful.
+    // Since we want to call success once we have all the gear, we will need to use dispatch_groups.
+    // We will want to wait till all the gear calls have been successful.
+    
+    __block NSError *potentialError;
     
     dispatch_group_t serviceGroup = dispatch_group_create();
     
@@ -95,11 +97,17 @@
                   dispatch_group_leave(serviceGroup);
                   
                   singleGear.brandName = gear.brandName;
-              } failure:failure];
+              } failure:^(NSError *error) {
+                  potentialError = error;
+              }];
     }
     
     dispatch_group_notify(serviceGroup,dispatch_get_main_queue(),^{
-        success();
+        if (potentialError) {
+            failure(potentialError);
+        } else {
+            success();
+        }
     });
 }
 

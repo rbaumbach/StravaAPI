@@ -28,17 +28,16 @@
     self.client = [[StravaAPIAFClient alloc] init];
     //    self.client = [[StravaAPIClient alloc] init];
     
+    // My athleteID: @"26492009"
     // Bike: @"b4784851"
     // Running Shoes: @"g3238861"
     
     [self.client getAthelete:@"26492009"
                      success:^(Athlete *athlete) {
                          [self removeActivityIndicator];
-                         
                          [self loadAthlete:athlete];
                      } failure:^(NSError *error) {
                          [self removeActivityIndicator];
-                         
                          [self loadError];
                      }];
 }
