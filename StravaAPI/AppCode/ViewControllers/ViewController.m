@@ -20,6 +20,12 @@
 
 @implementation ViewController
 
+#pragma mark - Dealloc
+
+- (void)dealloc {
+    NSLog(@"Athlete view controller deallocated!");
+}
+
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad {

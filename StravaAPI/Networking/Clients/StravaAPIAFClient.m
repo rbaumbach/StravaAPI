@@ -11,6 +11,8 @@
 
 @implementation StravaAPIAFClient
 
+#pragma mark - Init Method
+
 - (instancetype)init
 {
     self = [super init];
@@ -20,13 +22,19 @@
     return self;
 }
 
+#pragma mark - Dealloc
+
+- (void)dealloc {
+    NSLog(@"StravaAPIAFClient deallocated!");
+}
+
 #pragma mark - <StravaAPI>
 
 - (void)getAthelete:(NSString *)atheleteID
             success:(void (^)(Athlete *athlete))success
             failure:(void (^)(NSError *error))failure {
     NSString *endpointString = [NSString stringWithFormat:@"athletes/%@", atheleteID];
-        
+    
     [self get:endpointString success:^(id response) {
         AthleteDeserializer *deserializer = [[AthleteDeserializer alloc] init];
         Athlete *athlete = [deserializer deserialize:response];

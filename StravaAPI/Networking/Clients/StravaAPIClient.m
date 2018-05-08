@@ -21,6 +21,12 @@
     return self;
 }
 
+#pragma mark - Dealloc
+
+- (void)dealloc {
+    NSLog(@"StravaAPIClient deallocated!");
+}
+
 #pragma mark - <StravaAPI>
 
 - (void)getAthelete:(NSString *)atheleteID
