@@ -84,6 +84,8 @@
                                                             completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                                                 if (error) {
                                                                     failure(error);
+                                                                    
+                                                                    return;
                                                                 }
                                                                 
                                                                 NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
